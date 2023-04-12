@@ -12,7 +12,7 @@ const pool = mysql.createPool({
 });
 
 const mysqlexport = {
-  query(query: string, params: string|number[], callback: MyCallbackType): void {
+  query(query: string, params: (string | number)[], callback: MyCallbackType): void {
     if (process.env.LOG_MYSQL_LATENCY) console.time('mysql_latency');
     pool.getConnection((err: mysql.QueryError | NodeJS.ErrnoException | null, conn) => {
       if (err != null) {

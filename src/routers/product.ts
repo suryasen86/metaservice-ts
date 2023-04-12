@@ -2,17 +2,14 @@ import express, { Request, Response } from 'express';
 
 const router = express.Router();
 import productPersistance from '../helpers/product';
-import { log } from '../sys/log';
+// import { log } from '../sys/log';
 
-
-// import responseProvider from '../middlewares/responseProvider';
 router.get('/', (req: Request, res: Response) => {
 
     productPersistance.getAllProduct((err,resp)=>{
 
         if(err){
-            log(err,true,true)
-            res.send(err.message)
+            res.send({code:process.env.SYSTEM_ERROR_CODE,message:err.message})
         }
  
         else res.send({code:200,message:"success",data:resp})

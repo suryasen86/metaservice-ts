@@ -6,5 +6,9 @@
   "MY_SQL_DB": "ts",
   "LOGS_ERR": "false",
   "LOGS_INFO": "true",
-  "LOGS_DEBUG": "true"
+  "LOGS_DEBUG": "true",
+  "SYSTEM_ERROR_CODE": 500,
+  "SYSREDIS_HOST": "127.0.0.1",
+  "SYSREDIS_PASSWORD": "",
+  "SYSREDIS_PORT": "6379"
 }
