@@ -1,5 +1,8 @@
 "use strict";
-require('env2')('./devenv.json');
+if(process.env.NODE_ENV==="development"){
+  require('env2')('./devenv.json');
+}
+
 
 import productRouter from './routers/product';
 import express,{  Request, Response } from 'express'
