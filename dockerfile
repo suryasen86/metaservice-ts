@@ -8,16 +8,16 @@ WORKDIR /service
 COPY package*.json ./
 
 # Install the dependencies
-RUN yarn
+RUN yarn --production --silent
 
 # Copy the source files to the container's working directory
 COPY . .
 
 # Compile TypeScript to JavaScript
-RUN npm run build
+RUN yarn run build
 
 # Expose the application's port
 EXPOSE 3000
 
 # Start the application
-CMD [ "npm", "start" ]
+CMD [ "yarn", "start" ]
