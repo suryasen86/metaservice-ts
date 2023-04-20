@@ -3,13 +3,15 @@ if(process.env.NODE_ENV==="development"){
   require('env2')('./devenv.json');
 }
 
-
+import connectToRabbitMQ from './sys/pub';
 import productRouter from './routers/product';
 import express,{  Request, Response } from 'express'
+import consumer from './sys/sub';
 
+consumer.startListening();
+
+connectToRabbitMQ("metaservice_ts.registered1111",{qdqw:"Qdssqwd"})
 const app = express();
-
-
 
 
 

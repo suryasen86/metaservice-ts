@@ -10,5 +10,7 @@
   "SYSTEM_ERROR_CODE": 500,
   "SYSREDIS_HOST": "127.0.0.1",
   "SYSREDIS_PASSWORD": "",
-  "SYSREDIS_PORT": "6379"
+  "SYSREDIS_PORT": "6379",
+  "EXCHANGE": "fp",
+  "RABBIT_MQ_HOST": "localhost"
 }
