@@ -17,7 +17,7 @@ COPY . .
 RUN yarn run build
 
 # Expose the application's port
-EXPOSE 3000
+EXPOSE 3000 3001
 
 # Start the application
 CMD [ "yarn", "start" ]
