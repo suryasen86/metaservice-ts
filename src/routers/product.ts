@@ -6,14 +6,14 @@ import { log } from '../sys/log';
 
 router.get('/', (req: Request, res: Response) => {
 
-    productPersistance.getAllProduct((err,resp)=>{
+    productPersistance.getAllProduct((err, resp) => {
 
-        if(err){
-            log(err,true,true)
-            res.send({code:process.env.SYSTEM_ERROR_CODE,message:err.message})
+        if (err) {
+            log(err, true, true)
+            res.send({ code: process.env.SYSTEM_ERROR_CODE, message: err.message })
         }
- 
-        else res.send({code:200,message:"success",data:resp})
+
+        else res.send({ code: 200, message: "success", data: resp })
     })
 
 });
