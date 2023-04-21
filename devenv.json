@@ -12,5 +12,6 @@
   "SYSREDIS_PASSWORD": "",
   "SYSREDIS_PORT": "6379",
   "EXCHANGE": "fp",
-  "RABBIT_MQ_HOST": "localhost"
+  "RABBIT_MQ_HOST": "localhost",
+  "SERVICE_PORT":3000
 }

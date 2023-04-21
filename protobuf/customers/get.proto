@@ -1,0 +1,39 @@
+syntax="proto3";
+
+package customers.get;
+
+message request {
+    int32 customerid = 1;
+    string mobile = 2;
+    bool withtoken = 3;
+    int32 fpaccountid = 4;
+}
+
+message response {
+    message Customer {
+        string firstname = 1;
+        string lastname = 2;
+        string dob = 3;
+        string email = 4;
+        bool emailverified = 5;
+        string pincode = 6;
+        string address1 = 7;
+        string address2 = 8;
+        string address3 = 9;
+        string address4 = 10;
+        string status = 11;
+        int32 customerid = 12;
+        int32 fpaccountid = 13;
+        string pushid = 14;
+        string mobile = 15;
+        int32 id = 16;
+        string hubid = 17;
+        string platform = 18;
+        string created_at = 19;
+        string token = 20;
+        string comment = 21;
+        string fpversion = 22;
+    }
+    Customer customer = 1;
+    string msg = 2;
+}

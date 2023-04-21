@@ -1,0 +1,9 @@
+syntax="proto3";
+/*
+ Keep package name sane for categorizations
+*/
+package metaservice.otp.registered;
+
+message event {
+    string mobile = 1;
+}

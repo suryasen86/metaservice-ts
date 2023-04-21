@@ -7,6 +7,6 @@
     "esModuleInterop": true,
     "resolveJsonModule": true
   },
-  "include": ["src/**/*.ts", "proto/**/*.ts"],
+  "include": ["src/**/*.ts", "protobuf/**/*.ts"],
   "exclude": ["node_modules"]
 }
