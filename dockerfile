@@ -8,7 +8,7 @@ WORKDIR /service
 COPY package*.json ./
 
 # Install the dependencies
-RUN yarn --production --silent
+RUN yarn 
 
 # Copy the source files to the container's working directory
 COPY . .
