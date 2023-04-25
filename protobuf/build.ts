@@ -1,6 +1,6 @@
 import * as $protobuf from "protobufjs";
-/** Namespace metaservice. */
-export namespace metaservice {
+/** Namespace metaservicets. */
+export namespace metaservicets {
 
     /** Namespace otp. */
     namespace otp {
@@ -22,7 +22,7 @@ export namespace metaservice {
                  * Constructs a new event.
                  * @param [properties] Properties to set
                  */
-                constructor(properties?: metaservice.otp.registered.Ievent);
+                constructor(properties?: metaservicets.otp.registered.Ievent);
 
                 /** event mobile. */
                 public mobile: string;
@@ -32,23 +32,23 @@ export namespace metaservice {
                  * @param [properties] Properties to set
                  * @returns event instance
                  */
-                public static create(properties?: metaservice.otp.registered.Ievent): metaservice.otp.registered.event;
+                public static create(properties?: metaservicets.otp.registered.Ievent): metaservicets.otp.registered.event;
 
                 /**
-                 * Encodes the specified event message. Does not implicitly {@link metaservice.otp.registered.event.verify|verify} messages.
+                 * Encodes the specified event message. Does not implicitly {@link metaservicets.otp.registered.event.verify|verify} messages.
                  * @param message event message or plain object to encode
                  * @param [writer] Writer to encode to
                  * @returns Writer
                  */
-                public static encode(message: metaservice.otp.registered.Ievent, writer?: $protobuf.Writer): $protobuf.Writer;
+                public static encode(message: metaservicets.otp.registered.Ievent, writer?: $protobuf.Writer): $protobuf.Writer;
 
                 /**
-                 * Encodes the specified event message, length delimited. Does not implicitly {@link metaservice.otp.registered.event.verify|verify} messages.
+                 * Encodes the specified event message, length delimited. Does not implicitly {@link metaservicets.otp.registered.event.verify|verify} messages.
                  * @param message event message or plain object to encode
                  * @param [writer] Writer to encode to
                  * @returns Writer
                  */
-                public static encodeDelimited(message: metaservice.otp.registered.Ievent, writer?: $protobuf.Writer): $protobuf.Writer;
+                public static encodeDelimited(message: metaservicets.otp.registered.Ievent, writer?: $protobuf.Writer): $protobuf.Writer;
 
                 /**
                  * Decodes an event message from the specified reader or buffer.
@@ -58,7 +58,7 @@ export namespace metaservice {
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): metaservice.otp.registered.event;
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): metaservicets.otp.registered.event;
 
                 /**
                  * Decodes an event message from the specified reader or buffer, length delimited.
@@ -67,7 +67,7 @@ export namespace metaservice {
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
-                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): metaservice.otp.registered.event;
+                public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): metaservicets.otp.registered.event;
 
                 /**
                  * Verifies an event message.
@@ -81,7 +81,7 @@ export namespace metaservice {
                  * @param object Plain object
                  * @returns event
                  */
-                public static fromObject(object: { [k: string]: any }): metaservice.otp.registered.event;
+                public static fromObject(object: { [k: string]: any }): metaservicets.otp.registered.event;
 
                 /**
                  * Creates a plain object from an event message. Also converts values to other types if specified.
@@ -89,7 +89,7 @@ export namespace metaservice {
                  * @param [options] Conversion options
                  * @returns Plain object
                  */
-                public static toObject(message: metaservice.otp.registered.event, options?: $protobuf.IConversionOptions): { [k: string]: any };
+                public static toObject(message: metaservicets.otp.registered.event, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
                 /**
                  * Converts this event to JSON.

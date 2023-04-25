@@ -9,20 +9,20 @@ var $Reader = $protobuf.Reader, $Writer = $protobuf.Writer, $util = $protobuf.ut
 // Exported root namespace
 var $root = $protobuf.roots["default"] || ($protobuf.roots["default"] = {});
 
-$root.metaservice = (function() {
+$root.metaservicets = (function() {
 
     /**
-     * Namespace metaservice.
-     * @exports metaservice
+     * Namespace metaservicets.
+     * @exports metaservicets
      * @namespace
      */
-    var metaservice = {};
+    var metaservicets = {};
 
-    metaservice.otp = (function() {
+    metaservicets.otp = (function() {
 
         /**
          * Namespace otp.
-         * @memberof metaservice
+         * @memberof metaservicets
          * @namespace
          */
         var otp = {};
@@ -31,7 +31,7 @@ $root.metaservice = (function() {
 
             /**
              * Namespace registered.
-             * @memberof metaservice.otp
+             * @memberof metaservicets.otp
              * @namespace
              */
             var registered = {};
@@ -40,18 +40,18 @@ $root.metaservice = (function() {
 
                 /**
                  * Properties of an event.
-                 * @memberof metaservice.otp.registered
+                 * @memberof metaservicets.otp.registered
                  * @interface Ievent
                  * @property {string|null} [mobile] event mobile
                  */
 
                 /**
                  * Constructs a new event.
-                 * @memberof metaservice.otp.registered
+                 * @memberof metaservicets.otp.registered
                  * @classdesc Represents an event.
                  * @implements Ievent
                  * @constructor
-                 * @param {metaservice.otp.registered.Ievent=} [properties] Properties to set
+                 * @param {metaservicets.otp.registered.Ievent=} [properties] Properties to set
                  */
                 function event(properties) {
                     if (properties)
@@ -63,7 +63,7 @@ $root.metaservice = (function() {
                 /**
                  * event mobile.
                  * @member {string} mobile
-                 * @memberof metaservice.otp.registered.event
+                 * @memberof metaservicets.otp.registered.event
                  * @instance
                  */
                 event.prototype.mobile = "";
@@ -71,21 +71,21 @@ $root.metaservice = (function() {
                 /**
                  * Creates a new event instance using the specified properties.
                  * @function create
-                 * @memberof metaservice.otp.registered.event
+                 * @memberof metaservicets.otp.registered.event
                  * @static
-                 * @param {metaservice.otp.registered.Ievent=} [properties] Properties to set
-                 * @returns {metaservice.otp.registered.event} event instance
+                 * @param {metaservicets.otp.registered.Ievent=} [properties] Properties to set
+                 * @returns {metaservicets.otp.registered.event} event instance
                  */
                 event.create = function create(properties) {
                     return new event(properties);
                 };
 
                 /**
-                 * Encodes the specified event message. Does not implicitly {@link metaservice.otp.registered.event.verify|verify} messages.
+                 * Encodes the specified event message. Does not implicitly {@link metaservicets.otp.registered.event.verify|verify} messages.
                  * @function encode
-                 * @memberof metaservice.otp.registered.event
+                 * @memberof metaservicets.otp.registered.event
                  * @static
-                 * @param {metaservice.otp.registered.Ievent} message event message or plain object to encode
+                 * @param {metaservicets.otp.registered.Ievent} message event message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -98,11 +98,11 @@ $root.metaservice = (function() {
                 };
 
                 /**
-                 * Encodes the specified event message, length delimited. Does not implicitly {@link metaservice.otp.registered.event.verify|verify} messages.
+                 * Encodes the specified event message, length delimited. Does not implicitly {@link metaservicets.otp.registered.event.verify|verify} messages.
                  * @function encodeDelimited
-                 * @memberof metaservice.otp.registered.event
+                 * @memberof metaservicets.otp.registered.event
                  * @static
-                 * @param {metaservice.otp.registered.Ievent} message event message or plain object to encode
+                 * @param {metaservicets.otp.registered.Ievent} message event message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -113,18 +113,18 @@ $root.metaservice = (function() {
                 /**
                  * Decodes an event message from the specified reader or buffer.
                  * @function decode
-                 * @memberof metaservice.otp.registered.event
+                 * @memberof metaservicets.otp.registered.event
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                  * @param {number} [length] Message length if known beforehand
-                 * @returns {metaservice.otp.registered.event} event
+                 * @returns {metaservicets.otp.registered.event} event
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
                 event.decode = function decode(reader, length) {
                     if (!(reader instanceof $Reader))
                         reader = $Reader.create(reader);
-                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.metaservice.otp.registered.event();
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.metaservicets.otp.registered.event();
                     while (reader.pos < end) {
                         var tag = reader.uint32();
                         switch (tag >>> 3) {
@@ -142,10 +142,10 @@ $root.metaservice = (function() {
                 /**
                  * Decodes an event message from the specified reader or buffer, length delimited.
                  * @function decodeDelimited
-                 * @memberof metaservice.otp.registered.event
+                 * @memberof metaservicets.otp.registered.event
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {metaservice.otp.registered.event} event
+                 * @returns {metaservicets.otp.registered.event} event
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -158,7 +158,7 @@ $root.metaservice = (function() {
                 /**
                  * Verifies an event message.
                  * @function verify
-                 * @memberof metaservice.otp.registered.event
+                 * @memberof metaservicets.otp.registered.event
                  * @static
                  * @param {Object.<string,*>} message Plain object to verify
                  * @returns {string|null} `null` if valid, otherwise the reason why it is not
@@ -175,15 +175,15 @@ $root.metaservice = (function() {
                 /**
                  * Creates an event message from a plain object. Also converts values to their respective internal types.
                  * @function fromObject
-                 * @memberof metaservice.otp.registered.event
+                 * @memberof metaservicets.otp.registered.event
                  * @static
                  * @param {Object.<string,*>} object Plain object
-                 * @returns {metaservice.otp.registered.event} event
+                 * @returns {metaservicets.otp.registered.event} event
                  */
                 event.fromObject = function fromObject(object) {
-                    if (object instanceof $root.metaservice.otp.registered.event)
+                    if (object instanceof $root.metaservicets.otp.registered.event)
                         return object;
-                    var message = new $root.metaservice.otp.registered.event();
+                    var message = new $root.metaservicets.otp.registered.event();
                     if (object.mobile != null)
                         message.mobile = String(object.mobile);
                     return message;
@@ -192,9 +192,9 @@ $root.metaservice = (function() {
                 /**
                  * Creates a plain object from an event message. Also converts values to other types if specified.
                  * @function toObject
-                 * @memberof metaservice.otp.registered.event
+                 * @memberof metaservicets.otp.registered.event
                  * @static
-                 * @param {metaservice.otp.registered.event} message event
+                 * @param {metaservicets.otp.registered.event} message event
                  * @param {$protobuf.IConversionOptions} [options] Conversion options
                  * @returns {Object.<string,*>} Plain object
                  */
@@ -212,7 +212,7 @@ $root.metaservice = (function() {
                 /**
                  * Converts this event to JSON.
                  * @function toJSON
-                 * @memberof metaservice.otp.registered.event
+                 * @memberof metaservicets.otp.registered.event
                  * @instance
                  * @returns {Object.<string,*>} JSON object
                  */
@@ -229,7 +229,7 @@ $root.metaservice = (function() {
         return otp;
     })();
 
-    return metaservice;
+    return metaservicets;
 })();
 
 $root.customers = (function() {
