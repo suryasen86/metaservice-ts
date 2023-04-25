@@ -10,8 +10,8 @@ import { log } from './sys/log';
 import gracefulexit from './sys/gracefulexit'
 consumer.startListening();
 
-import servicewrapper  from './sys/servicewrapper'
-const {grpceastwestserver}=servicewrapper()
+import servicewrapper from './sys/servicewrapper'
+const { grpceastwestserver } = servicewrapper()
 const app = express();
 
 

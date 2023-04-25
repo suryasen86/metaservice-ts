@@ -1,0 +1,14 @@
+syntax="proto3";
+/*
+ Keep package name sane for categorizations
+*/
+package services;
+import "metaservicets/commsexample.proto";
+import "metaservicets/commsresponseexample.proto";
+
+// The greeting service definition.
+service metaservicets {
+    // Sends a greeting
+    rpc commsexample (.metaservicets.commsexample.request) returns (.metaservicets.commsexample.response) {}
+    rpc commsresponseexample (.metaservicets.commsresponseexample.request) returns (.metaservicets.commsresponseexample.response) {}
+}

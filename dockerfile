@@ -21,7 +21,7 @@ RUN npm run proto
 
 
 # Expose the application's port
-EXPOSE 3000 3002
+EXPOSE 3000 3001 3001
 
 USER node
 # Start the application
