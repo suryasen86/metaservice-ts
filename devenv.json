@@ -8,11 +8,14 @@
   "LOGS_INFO": "true",
   "LOGS_DEBUG": "true",
   "SYSTEM_ERROR_CODE": 500,
+  "NOT_FOUND_CODE":400,
   "SYSREDIS_HOST": "127.0.0.1",
   "SYSREDIS_PASSWORD": "",
   "SYSREDIS_PORT": "6379",
   "EXCHANGE": "fp",
   "RABBIT_MQ_HOST": "localhost",
   "SERVICE_PORT": 3000,
-  "PRODUCT_REDIS_KEY": "products"
+  "PRODUCT_REDIS_KEY": "products",
+  "GRPC_EAST_WEST_PORT":"3002",
+  "GRPC_HOST":"0.0.0.0"
 }

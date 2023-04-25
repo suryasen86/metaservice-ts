@@ -10,7 +10,8 @@ import { log } from './sys/log';
 import gracefulexit from './sys/gracefulexit'
 consumer.startListening();
 
-
+import servicewrapper  from './sys/servicewrapper'
+const {grpceastwestserver}=servicewrapper()
 const app = express();
 
 
@@ -18,7 +19,7 @@ const app = express();
 app.use('/api/product', productRouter);
 
 app.use(async (req: Request, res: Response) => {
-  res.json({ code: 404, message: 'Not Found' })
+  res.json({ code: process.env.NOT_FOUND_CODE, message: `${process.env.NOT_FOUND_CODE} Not Found` })
 })//handling 404 error
 
 const port = process.env.SERVICE_PORT || 3000

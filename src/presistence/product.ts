@@ -23,8 +23,8 @@ class ProductPersistance {
 
     function getFromDb(_cb: MyCallbackType) {
       if (resp) {
-        _cb(null)
-        return
+        return _cb(null)
+  
       }
       mysql.query('SELECT * FROM product  order by 1 desc', [], (err, rows) => {
         if (err) {

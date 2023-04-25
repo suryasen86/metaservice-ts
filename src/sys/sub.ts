@@ -3,7 +3,7 @@ import { log, MyCallbackType } from './log';
 import { name as pname } from '../../package.json'
 import reaction from '../reaction'
 import * as protoroot from "../../protobuf/build";
-import _ from "lodash";
+import _ from "lodash"; 
 interface Channel {
   reactionKey: string;
   filename: string;
@@ -12,7 +12,7 @@ interface Channel {
 let _reactions: Channel[] = []
 Object.keys(reaction).forEach(async function (key) {
   let fun = await import(`../reaction/${reaction[key]}`)
-  let channel = {
+  let channel :Channel= {
     reactionKey: key,
     filename: reaction[key],
     execution: fun.default
