@@ -2,7 +2,7 @@ syntax="proto3";
 /*
  Keep package name sane for categorizations
 */
-package metaservice.otp.registered;
+package metaservicets.otp.registered;
 
 message event {
     string mobile = 1;
