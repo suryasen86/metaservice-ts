@@ -50,13 +50,14 @@
     "env2": "^2.2.2",
     "google-protobuf": "^3.21.2",
     "grpc": "^1.24.11",
-    "grpc-tools": "^1.12.4",
     "grpc_tools_node_protoc_ts": "^5.3.3",
+    "grpc-tools": "^1.12.4",
     "husky": "^8.0.3",
     "ioredis": "^5.3.1",
     "lodash": "^4.17.21",
     "mysql2": "^3.2.0",
     "protobufjs": "^6.11.2",
+    "tmp": "^0.2.1",
     "uuid": "^9.0.0"
   }
 }

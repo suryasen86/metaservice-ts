@@ -13,11 +13,6 @@ const options = {
   defaults: true,
   oneofs: true,
 };
-
-
-interface GrpcClients {
-    [key: string]: grpc.Client;
-}
   let grpcclient: any = {};
   let packageDefinition: protoLoader.PackageDefinition;
   try {

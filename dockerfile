@@ -8,21 +8,21 @@ WORKDIR /service
 COPY package*.json ./
 
 # Install the dependencies
-RUN yarn 
+RUN npm i 
 
 # Copy the source files to the container's working directory
 COPY . .
 
 # Build protobuff
-RUN yarn run proto
+RUN npm run proto
 
 # Compile TypeScript to JavaScript
-RUN yarn run build
+# RUN yarn run dev
 
 
 # Expose the application's port
-EXPOSE 3000 3001
+EXPOSE 3000 3002
 
 USER node
 # Start the application
-CMD [ "yarn", "start"]
+CMD ["yarn","dev"]
