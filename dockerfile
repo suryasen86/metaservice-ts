@@ -25,4 +25,4 @@ EXPOSE 3000 3001 3001
 
 USER node
 # Start the application
-CMD ["yarn","dev"]
+CMD ["yarn","prod"]

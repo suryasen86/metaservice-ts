@@ -10,7 +10,8 @@
     "start": "node dist/src/index.js",
     "proto": "npm run pbjs & npm run pbts ",
     "pbjs": "pbjs -t static-module -w commonjs -o ./protobuf/build.js  ./protobuf/events/* ./protobuf/customers/* ",
-    "pbts": "pbts -o ./protobuf/build.ts ./protobuf/build.js"
+    "pbts": "pbts -o ./protobuf/build.ts ./protobuf/build.js",
+    "prod": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts"
   },
   "repository": {
     "type": "git",

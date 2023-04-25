@@ -9,6 +9,7 @@ class ProductPersistance {
   getAll(callback: MyCallbackType): void {
 
     let resp: any = null;
+    return callback(null, { msg: "hello" });
     let redis = sysredis.getClient()
 
     function getFromRedis(_cb: MyCallbackType) {
@@ -24,7 +25,7 @@ class ProductPersistance {
     function getFromDb(_cb: MyCallbackType) {
       if (resp) {
         return _cb(null)
-  
+
       }
       mysql.query('SELECT * FROM product  order by 1 desc', [], (err, rows) => {
         if (err) {
