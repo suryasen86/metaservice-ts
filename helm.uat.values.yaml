@@ -1,0 +1,188 @@
+# Default values for servicechart.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+image:
+  repository: tonudon86/mongo-crud/metaservice
+  tag: 1.0.2
+  pullPolicy: IfNotPresent
+
+metaconfig:
+  ARCHIVAL_CONNECTION_LIMIT: "5"
+  ARCHIVAL_HOST: 35.200.198.224
+  ARCHIVAL_PORT: "3306"
+  NODE_ENV: uat
+  SERVICE_PORT: 3000
+  SYSNATS_TIMEOUT: 10000
+  RXNATS_TIMEOUT: 10000
+  SYSNATS_HOST: sysnats-nats-client
+  SYSNATS_PORT: 4222
+  RXNATS_HOST: rxnats-nats-client.rxnats
+  # RXNATS_HOSTS: 172.29.5.5,172.29.3.8
+  RXNATS_PORT: 4222
+  MYSQL_HOST: 35.200.198.224
+  MYSQL_PORT: 3306
+  MYSQL_CONNECTION_LIMIT: 5
+  MYSQL_DATETIME_FORMAT: "YYYY-MM-DD HH:mm:ss"
+  CACHEREDIS_HOST: sysredis-redis-ha-server-0.sysredis-redis-ha.sysredis
+  CACHEREDIS_PORT: 6379
+  CACHEREDIS_HOSTS: sysredis-redis-ha-server-0.sysredis-redis-ha.sysredis,sysredis-redis-ha-server-1.sysredis-redis-ha.sysredis,sysredis-redis-ha-server-2.sysredis-redis-ha.sysredis
+  CACHEREDIS_CLUSTER_NAME: mymaster
+  CACHEREDIS_SENTINEL_PORT: 26379
+  CACHEREDIS_READER_HOST: sysredis-redis-ha-server-0.sysredis-redis-ha.sysredis
+  CACHEREDIS_READER_PORT: 26379
+  CACHEREDIS_TOKEN_MIN_LENGTH: 4
+  CACHEREDIS_SENTINEL_READER_PORT: 26379
+  CACHEREDIS_READER_HOSTS: sysredis-redis-ha-server-0.sysredis-redis-ha.sysredis,sysredis-redis-ha-server-1.sysredis-redis-ha.sysredis,sysredis-redis-ha-server-2.sysredis-redis-ha.sysredis
+  CACHEREDIS_READER_CLUSTER_NAME: mymaster
+  SYSREDIS_HOST: sysredis-redis-ha-server-0.sysredis-redis-ha.sysredis
+  SYSREDIS_HOSTS: sysredis-redis-ha-server-0.sysredis-redis-ha.sysredis,sysredis-redis-ha-server-1.sysredis-redis-ha.sysredis,sysredis-redis-ha-server-2.sysredis-redis-ha.sysredis
+  SYSREDIS_PORT: 26379
+  SYSREDIS_OLD_PORT: 6379
+  SYSREDIS_SENTINEL_PORT: 26379
+  SYSREDIS_CLUSTER_NAME: mymaster
+  SYSREDIS_READER_HOST: sysredis-redis-ha-server-0.sysredis-redis-ha.sysredis
+  SYSREDIS_READER_HOSTS: sysredis-redis-ha-server-0.sysredis-redis-ha.sysredis,sysredis-redis-ha-server-1.sysredis-redis-ha.sysredis,sysredis-redis-ha-server-2.sysredis-redis-ha.sysredis
+  SYSREDIS_READER_PORT: 26379
+  SYSREDIS_OLD_READER_PORT: 6379
+  SYSREDIS_SENTINEL_READER_PORT: 26379
+  SYSREDIS_READER_CLUSTER_NAME: mymaster
+  STREAMREDIS_HOST: streamredis-master
+  STREAMREDIS_PORT: 6379
+  GRPC_HOST: 0.0.0.0
+  GRPC_NORTH_SOUTH_PORT: 3001
+  GRPC_EAST_WEST_PORT: 3002
+  RXNATS_SUBSCRIBE_ALL: false
+  EAST_WEST: eastwest
+  NORTH_SOUTH: northsouth
+  EXTERNAL_DNS: fpstaging.quikwallet.com
+  ENABLE_COUNTERS: true
+  ENABLE_SENTINELS: true
+  ENABLE_RABBITMQ: true
+  RABBITMQ_SUBSCRIBE_ALL: false
+  RABBITMQ_EXCHANGE: futurepay
+  RABBITMQ_DEAD_EXCHANGE: rip
+  RABBITMQ_HOSTS: rabbitmq-rabbitmq-ha-0.rabbitmq-rabbitmq-ha-discovery.default.svc.cluster.local,rabbitmq-rabbitmq-ha-1.rabbitmq-rabbitmq-ha-discovery.default.svc.cluster.local,rabbitmq-rabbitmq-ha-2.rabbitmq-rabbitmq-ha-discovery.default.svc.cluster.local
+  RABBITMQ_HOST: rabbitmq-rabbitmq-ha-0.rabbitmq-rabbitmq-ha-discovery.default.svc.cluster.local
+  RABBITMQ_USER: fp
+  RABBITMQ_PASSWORD: fp
+  RABBITMQ_TTL: 180000
+  RABBITMQ_PREFETCH: 10
+  RABBITMQ_OPT_EXCLUSIVE: false
+  RABBITMQ_OPT_DURABLE: false
+  RABBITMQ_OPT_QUEUE_DEL: false
+  RABBITMQ_HEARTBEAT: 60
+  RABBITMQ_REQUEUE_RETRY: 3
+  RABBITMQ_EXPONENT_TIME: 1000
+  DNS_SUFFIX: .default.svc.cluster.local
+  AWS_BUCKET_NAME_CONTENT: fpstaging
+  AWS_REGION_CONTENT: ap-south-1
+  BREEZE_EMAIL_CC: amit.sah@livquik.com
+  BREEZE_EMAIL_TO: qa@livquik.com
+  BREEZE_REPORT_CODE: false
+  BREEZE_REPORT_INLINE: true
+  BREEZE_REPORT_JSON: false
+  BREEZE_REPORT_DIR: /tmp
+  BREEZE_REPORT_TITLE: Breeze report staging
+  BREEZE_REPORT_FILE_NAME: breeze-staging
+
+extraconfig: # List service level config
+  NAME: metaservicets
+  MY_SQL_HOST: localhost
+  MY_SQL_USER: root
+  MY_SQL_PASSWORD: ""
+  MY_SQL_DB: ts
+  LOGS_ERR: "false"
+  LOGS_INFO: "true"
+  LOGS_DEBUG: "true"
+  SYSTEM_ERROR_CODE: 500
+  NOT_FOUND_CODE: 400
+  SYSREDIS_HOST: 127.0.0.1
+  SYSREDIS_PASSWORD: ""
+  SYSREDIS_PORT: "6379"
+  EXCHANGE: fp
+  RABBIT_MQ_HOST: localhost
+  SERVICE_PORT: 3000
+  PRODUCT_REDIS_KEY: products
+  GRPC_EAST_WEST_PORT: "3002"
+  GRPC_HOST: 0.0.0.0
+# Make this true only if you have extrasecrets, the data of which is managed seperately by authorize personnel
+extrasecrets: false
+
+edgeingress:
+  enabled: true
+  name: metaservicets
+  prefix: /services.metaservicets/
+  rewrite: /services.metaservicets/
+  service: metaservicets
+  port: 3001
+  grpc: true
+
+extraingress:
+  enabled: true
+  name: metaservicetsrest
+  prefix: /metaservicets/
+  rewrite: /
+  service: metaservicets
+  port: 3000
+  grpc: false
+
+metaegressrules:
+  - name: mysql
+    host: mysql
+    addresses: 35.200.198.224/32
+    port: 3306
+    protocol: tcp
+  - name: fpapiman
+    host: fpapiman
+    addresses: 172.31.66.50/32
+    port: 8080
+    protocol: http
+
+# Put in same format as metaegressrules above
+extraegressrules:
+  - name: storeloc
+    host: fgstorelocator.in
+    port: 80
+    protocol: http
+
+servicehttp:
+  type: ClusterIP
+  port: 3000
+
+servicenorthsouthgrpc:
+  type: ClusterIP
+  port: 3001
+
+serviceeastwestgrpc:
+  type: ClusterIP
+  port: 3002
+
+resources:
+  limits:
+    cpu: 200m
+    memory: 256Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+hpa:
+  minreplicas: 1
+  maxreplicas: 5
+  cpuavgpercent: 70
+  memavgvalue: 200Mi
+
+deployment:
+  minreadyseconds: 5
+
+crons:
+  - name: gccustomers-trashtransdiscovery
+    schedule: "0 0 * * *"
+    entrypoint: ./jobs/trash_trans_discovery.js
+
+nodeselector:
+  type: service
+# crons:
+#   - name: customerredismigration
+#     schedule: '30 5 * * 4'
+#     entrypoint: ./jobs/redis.migration.js
