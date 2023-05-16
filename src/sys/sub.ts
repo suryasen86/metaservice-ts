@@ -68,7 +68,7 @@ class RabbitMQConsumer {
       })
       const exchange = process.env.EXCHANGE ?? 'fp';
       const channel = await connection.createChannel();
-      await channel.assertQueue(this.queue, { durable: true });
+      await channel.assertQueue(this.queue, { durable: false });
       _reactions.forEach(reaction => {
         bindSubcriberEvent.push(channel.bindQueue(this.queue, exchange, reaction.reactionKey))
       })
